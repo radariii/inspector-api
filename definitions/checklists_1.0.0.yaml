@@ -1,0 +1,346 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Checklists
+  x-ibm-name: checklists
+host: $(catalog.host)
+basePath: /api
+paths:
+  /checklists:
+    post:
+      tags:
+        - checklists
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: checklists.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/checklists'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/checklists'
+      deprecated: false
+    put:
+      tags:
+        - checklists
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source.
+      operationId: checklists.upsert
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/checklists'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/checklists'
+      deprecated: false
+    get:
+      tags:
+        - checklists
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: checklists.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/checklists'
+      deprecated: false
+  '/checklists/{id}/exists':
+    get:
+      tags:
+        - checklists
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'checklists.exists__get_checklists_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/checklists/{id}':
+    head:
+      tags:
+        - checklists
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'checklists.exists__head_checklists_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - checklists
+      summary: Find a model instance by id from the data source.
+      operationId: checklists.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/checklists'
+      deprecated: false
+    delete:
+      tags:
+        - checklists
+      summary: Delete a model instance by id from the data source.
+      operationId: checklists.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - checklists
+      summary: >-
+        Update attributes for a model instance and persist it into the data
+        source.
+      operationId: checklists.prototype.updateAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/checklists'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/checklists'
+      deprecated: false
+  /checklists/findOne:
+    get:
+      tags:
+        - checklists
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: checklists.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/checklists'
+      deprecated: false
+  /checklists/update:
+    post:
+      tags:
+        - checklists
+      summary: Update instances of the model matched by where from the data source.
+      operationId: checklists.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/checklists'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances updated
+            type: object
+      deprecated: false
+  /checklists/count:
+    get:
+      tags:
+        - checklists
+      summary: Count instances of the model matched by where from the data source.
+      operationId: checklists.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /checklists/change-stream:
+    post:
+      tags:
+        - checklists
+      summary: Create a change stream.
+      operationId: checklists.createChangeStream__post_checklists_change-stream
+      parameters:
+        - name: options
+          in: formData
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+    get:
+      tags:
+        - checklists
+      summary: Create a change stream.
+      operationId: checklists.createChangeStream__get_checklists_change-stream
+      parameters:
+        - name: options
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+securityDefinitions:
+  clientID:
+    description: ''
+    in: header
+    name: X-IBM-Client-Id
+    type: apiKey
+security:
+  - clientID: []
+x-ibm-configuration:
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: 'client:Loopback-client'
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+    Sandbox:
+      properties:
+        runtime-url: 'https://inspector-apis-impl.mybluemix.net'
+  properties:
+    catalog.host:
+      value: 'http://localhost:4002'
+      description: ''
+      encoded: false
+    runtime-url:
+      value: 'http://localhost:4001'
+      description: ''
+      encoded: false
+definitions:
+  checklists:
+    properties:
+      _id:
+        description: Built-in id
+        type: string
+      id:
+        description: User-driven id
+        type: string
+      description:
+        description: Description of checklist item
+        type: string
+      details:
+        description: Full details of inspection item
+        type: string
+      requiresReinspection:
+        description: Whether a violation will require reinspection
+        type: boolean
+    required:
+      - _id
+    additionalProperties: false
+consumes:
+  - application/json
+produces:
+  - application/json
+schemes:
+  - https

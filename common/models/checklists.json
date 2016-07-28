@@ -1,0 +1,40 @@
+{
+  "name": "checklists",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "_id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "description": "Built-in id"
+    },
+    "id": {
+      "type": "string",
+      "required": false,
+      "description": "User-driven id"
+    },
+    "description": {
+      "type": "string",
+      "required": false,
+      "description": "Description of checklist item"
+    },
+    "details": {
+      "type": "string",
+      "required": false,
+      "description": "Full details of inspection item"
+    },
+    "requiresReinspection": {
+      "type": "boolean",
+      "required": false,
+      "description": "Whether a violation will require reinspection"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

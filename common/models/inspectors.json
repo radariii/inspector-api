@@ -1,0 +1,50 @@
+{
+  "name": "inspectors",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "_id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "description": "Built-in id"
+    },
+    "icon": {
+      "type": "string",
+      "required": false,
+      "description": "The URL for the icon representing this inspector"
+    },
+    "id": {
+      "type": "string",
+      "required": false,
+      "description": "User-generated id"
+    },
+    "inspectionsCompleted": {
+      "type": "number",
+      "required": false,
+      "description": "The number of inspections completed"
+    },
+    "inspectionsRemaining": {
+      "type": "number",
+      "required": false,
+      "description": "The number of inspections remaining"
+    },
+    "location": {
+      "type": "string",
+      "required": false,
+      "description": "The current location of the inspector"
+    },
+    "name": {
+      "type": "string",
+      "required": false,
+      "description": "The name of the inspector"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

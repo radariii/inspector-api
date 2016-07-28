@@ -1,0 +1,83 @@
+{
+  "name": "inspections",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "_id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "description": "Built-in id"
+    },
+    "contactName": {
+      "type": "string",
+      "id": false,
+      "required": false,
+      "description": "Primary contact for the location venue"
+    },
+    "contactPhone": {
+      "type": "string",
+      "required": false,
+      "description": "Primary contact phone number"
+    },
+    "duration": {
+      "type": "number",
+      "required": false,
+      "description": "Duration of the inspection, in seconds"
+    },
+    "id": {
+      "type": "string",
+      "required": false,
+      "description": "Accessible id"
+    },
+    "incidents": {
+      "type": [
+        "object"
+      ],
+      "required": false,
+      "description": "Array of incidents discovered during inspection"
+    },
+    "inspector": {
+      "type": "string",
+      "required": false,
+      "description": "id of the inspector assigned"
+    },
+    "location": {
+      "type": "string",
+      "required": false,
+      "description": "Address to be inspected"
+    },
+    "name": {
+      "type": "string",
+      "required": false,
+      "description": "Venue name"
+    },
+    "reason": {
+      "type": "string",
+      "required": false,
+      "description": "Reason for the inspection"
+    },
+    "startTime": {
+      "type": "string",
+      "required": false,
+      "description": "Timestamp string for start time"
+    },
+    "status": {
+      "type": "string",
+      "required": false,
+      "description": "The inspection status"
+    },
+    "_rev": {
+      "type": "string",
+      "required": false,
+      "description": "The revision number of the document version"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

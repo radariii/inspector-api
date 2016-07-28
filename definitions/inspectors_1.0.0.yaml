@@ -1,0 +1,355 @@
+paths:
+  /inspectors:
+    post:
+      tags:
+        - inspectors
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: inspectors.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/inspectors'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/inspectors'
+      deprecated: false
+    put:
+      tags:
+        - inspectors
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source.
+      operationId: inspectors.upsert
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/inspectors'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/inspectors'
+      deprecated: false
+    get:
+      tags:
+        - inspectors
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: inspectors.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/inspectors'
+      deprecated: false
+  '/inspectors/{id}/exists':
+    get:
+      tags:
+        - inspectors
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'inspectors.exists__get_inspectors_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/inspectors/{id}':
+    head:
+      tags:
+        - inspectors
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'inspectors.exists__head_inspectors_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - inspectors
+      summary: Find a model instance by id from the data source.
+      operationId: inspectors.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/inspectors'
+      deprecated: false
+    delete:
+      tags:
+        - inspectors
+      summary: Delete a model instance by id from the data source.
+      operationId: inspectors.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - inspectors
+      summary: >-
+        Update attributes for a model instance and persist it into the data
+        source.
+      operationId: inspectors.prototype.updateAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/inspectors'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/inspectors'
+      deprecated: false
+  /inspectors/findOne:
+    get:
+      tags:
+        - inspectors
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: inspectors.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/inspectors'
+      deprecated: false
+  /inspectors/update:
+    post:
+      tags:
+        - inspectors
+      summary: Update instances of the model matched by where from the data source.
+      operationId: inspectors.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/inspectors'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances updated
+            type: object
+      deprecated: false
+  /inspectors/count:
+    get:
+      tags:
+        - inspectors
+      summary: Count instances of the model matched by where from the data source.
+      operationId: inspectors.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /inspectors/change-stream:
+    post:
+      tags:
+        - inspectors
+      summary: Create a change stream.
+      operationId: inspectors.createChangeStream__post_inspectors_change-stream
+      parameters:
+        - name: options
+          in: formData
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+    get:
+      tags:
+        - inspectors
+      summary: Create a change stream.
+      operationId: inspectors.createChangeStream__get_inspectors_change-stream
+      parameters:
+        - name: options
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+definitions:
+  x-any:
+    properties: {}
+  inspectors:
+    properties:
+      _id:
+        description: Built-in id
+        type: string
+      icon:
+        description: The URL for the icon representing this inspector
+        type: string
+      id:
+        description: User-generated id
+        type: string
+      inspectionsCompleted:
+        description: The number of inspections completed
+        type: number
+        format: double
+      inspectionsRemaining:
+        description: The number of inspections remaining
+        type: number
+        format: double
+      location:
+        description: The current location of the inspector
+        type: string
+      name:
+        description: The name of the inspector
+        type: string
+    required:
+      - _id
+    additionalProperties: false
+swagger: '2.0'
+info:
+  x-ibm-name: inspectors
+  version: 1.0.0
+  title: Inspectors
+schemes:
+  - https
+host: $(catalog.host)
+basePath: /api
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+security:
+  - {}
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+    Sandbox:
+      properties:
+        runtime-url: 'https://inspector-apis-impl.mybluemix.net'
+  properties:
+    catalog.host:
+      value: 'http://localhost:4002'
+      description: ''
+      encoded: false
+    runtime-url:
+      value: 'http://localhost:4001'
+      description: ''
+      encoded: false
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: 'client:Loopback-client'

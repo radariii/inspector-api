@@ -1,0 +1,369 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Inspections
+  x-ibm-name: inspections
+host: $(catalog.host)
+basePath: /api
+paths:
+  /inspections:
+    post:
+      tags:
+        - inspections
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: inspections.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/inspections'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/inspections'
+      deprecated: false
+    put:
+      tags:
+        - inspections
+      summary: Update an existing model instance or insert a new one into the data source.
+      operationId: inspections.upsert
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/inspections'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/inspections'
+      deprecated: false
+    get:
+      tags:
+        - inspections
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: inspections.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/inspections'
+      deprecated: false
+  '/inspections/{id}/exists':
+    get:
+      tags:
+        - inspections
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'inspections.exists__get_inspections_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/inspections/{id}':
+    head:
+      tags:
+        - inspections
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'inspections.exists__head_inspections_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - inspections
+      summary: Find a model instance by id from the data source.
+      operationId: inspections.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/inspections'
+      deprecated: false
+    delete:
+      tags:
+        - inspections
+      summary: Delete a model instance by id from the data source.
+      operationId: inspections.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - inspections
+      summary: Update attributes for a model instance and persist it into the data source.
+      operationId: inspections.prototype.updateAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/inspections'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/inspections'
+      deprecated: false
+  /inspections/findOne:
+    get:
+      tags:
+        - inspections
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: inspections.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/inspections'
+      deprecated: false
+  /inspections/update:
+    post:
+      tags:
+        - inspections
+      summary: Update instances of the model matched by where from the data source.
+      operationId: inspections.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/inspections'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances updated
+            type: object
+      deprecated: false
+  /inspections/count:
+    get:
+      tags:
+        - inspections
+      summary: Count instances of the model matched by where from the data source.
+      operationId: inspections.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /inspections/change-stream:
+    post:
+      tags:
+        - inspections
+      summary: Create a change stream.
+      operationId: inspections.createChangeStream__post_inspections_change-stream
+      parameters:
+        - name: options
+          in: formData
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+    get:
+      tags:
+        - inspections
+      summary: Create a change stream.
+      operationId: inspections.createChangeStream__get_inspections_change-stream
+      parameters:
+        - name: options
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+securityDefinitions:
+  clientID:
+    description: ''
+    in: header
+    name: X-IBM-Client-Id
+    type: apiKey
+security:
+  - clientID: []
+x-ibm-configuration:
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: 'client:Loopback-client'
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+    Sandbox:
+      properties:
+        runtime-url: 'https://inspector-apis-impl.mybluemix.net'
+  properties:
+    catalog.host:
+      value: 'http://localhost:4002'
+      description: ''
+      encoded: false
+    runtime-url:
+      value: 'http://localhost:4001'
+      description: ''
+      encoded: false
+definitions:
+  inspections:
+    properties:
+      _id:
+        description: Built-in id
+        type: string
+      contactName:
+        description: Primary contact for the location venue
+        type: string
+      contactPhone:
+        description: Primary contact phone number
+        type: string
+      duration:
+        description: 'Duration of the inspection, in seconds'
+        type: number
+        format: double
+      id:
+        description: Accessible id
+        type: string
+      incidents:
+        description: Array of incidents discovered during inspection
+        type: array
+        items:
+          type: object
+      inspector:
+        description: id of the inspector assigned
+        type: string
+      location:
+        description: Address to be inspected
+        type: string
+      name:
+        description: Venue name
+        type: string
+      reason:
+        description: Reason for the inspection
+        type: string
+      startTime:
+        description: Timestamp string for start time
+        type: string
+      status:
+        description: The inspection status
+        type: string
+      _rev:
+        description: The revision number of the document version
+        type: string
+    required:
+      - _id
+    additionalProperties: false
+consumes:
+  - application/json
+produces:
+  - application/json
+schemes:
+  - https

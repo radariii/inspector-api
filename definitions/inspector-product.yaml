@@ -1,0 +1,37 @@
+product: 1.0.0
+info:
+  name: inspector
+  title: inspector
+  version: 1.0.0
+apis:
+  checklists:
+    $ref: checklists_1.0.0.yaml
+  inspections:
+    $ref: inspections_1.0.0.yaml
+  inspectors:
+    $ref: inspectors_1.0.0.yaml
+visibility:
+  view:
+    type: public
+  subscribe:
+    type: authenticated
+plans:
+  platinum:
+    title: Platinum
+    apis: {}
+    rate-limit:
+      value: unlimited
+    description: Unlimited plan for the largest of use cases
+  gold:
+    title: Gold
+    apis: {}
+    rate-limit:
+      value: 100/1minute
+    description: Commercial plan for small to medium businesses
+  silver:
+    title: Silver
+    description: Entry level plan for experimenting with the Inspector APIs
+    approval: false
+    rate-limit:
+      value: 100/hour
+      hard-limit: false
