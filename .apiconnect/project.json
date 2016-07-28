@@ -1,0 +1,17 @@
+{
+  "ids": {
+    "Project": 9
+  },
+  "models": {
+    "Project": {
+      "1": "{\"name\":\"xml-test-app\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/node/xml-test-app\",\"displayName\":\"xml-test-app\",\"type\":\"directory\",\"projectType\":\"unknown\",\"id\":1}",
+      "2": "{\"name\":\"xml-test-api-app\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/node/xml-test-app/xml-test-api-app\",\"displayName\":\"xml-test-api-app\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":2}",
+      "3": "{\"name\":\"apiconnect\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/apiconnect\",\"displayName\":\"apiconnect\",\"type\":\"directory\",\"projectType\":\"unknown\",\"id\":3}",
+      "4": "{\"name\":\"community-health-api\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/apiconnect/community-health-api\",\"displayName\":\"community-health-api\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":4}",
+      "5": "{\"name\":\"inspector\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/apiconnect/inspector\",\"displayName\":\"inspector\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":5}",
+      "6": "{\"name\":\"communitybank\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/apiconnect/communitybank\",\"displayName\":\"communitybank\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":6}",
+      "7": "{\"name\":\"bugtest\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/apiconnect/bugtest\",\"displayName\":\"bugtest\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":7}",
+      "8": "{\"name\":\"inspector\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api\",\"displayName\":\"inspector\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":8}"
+    }
+  }
+}

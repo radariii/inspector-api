@@ -1,0 +1,11 @@
+apiServers: 1.0.0
+servers:
+  - displayName: US South
+    name: us-south
+    host: us.apiconnect.ibmcloud.com
+  - displayName: United Kingdom
+    name: eu-gb
+    host: eu.apiconnect.ibmcloud.com
+  - displayName: Sydney
+    name: au-syd
+    host: au.apiconnect.ibmcloud.com
