@@ -1,6 +1,6 @@
 {
   "ids": {
-    "Project": 9
+    "Project": 12
   },
   "models": {
     "Project": {
@@ -11,7 +11,10 @@
       "5": "{\"name\":\"inspector\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/apiconnect/inspector\",\"displayName\":\"inspector\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":5}",
       "6": "{\"name\":\"communitybank\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/apiconnect/communitybank\",\"displayName\":\"communitybank\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":6}",
       "7": "{\"name\":\"bugtest\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/apiconnect/bugtest\",\"displayName\":\"bugtest\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":7}",
-      "8": "{\"name\":\"inspector\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api\",\"displayName\":\"inspector\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":8}"
+      "8": "{\"name\":\"inspector\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api\",\"displayName\":\"inspector\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":8}",
+      "9": "{\"name\":\"inspector-api-bpm\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api-bpm\",\"displayName\":\"inspector-api-bpm\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":9}",
+      "10": "{\"name\":\"inspector-api-test\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api-test\",\"displayName\":\"inspector-api-test\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":10}",
+      "11": "{\"name\":\"inspector-app\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-app\",\"displayName\":\"inspector-app\",\"type\":\"directory\",\"projectType\":\"unknown\",\"id\":11}"
     }
   }
 }
