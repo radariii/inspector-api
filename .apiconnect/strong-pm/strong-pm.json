@@ -1,0 +1,45 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ServerService": 3,
+    "Group": 1,
+    "Executor": 2,
+    "Gateway": 1,
+    "ServiceInstance": 3,
+    "ServiceProcess": 5,
+    "ServiceMetric": 1,
+    "AgentTrace": 2,
+    "ExpressUsageRecord": 1,
+    "ProfileData": 1
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ServerService": {
+      "1": "{\"name\":\"inspector\",\"env\":{\"__APIC_APP_HOME\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api\"},\"_groups\":[{\"name\":\"default\",\"scale\":1,\"id\":1}],\"id\":1,\"deploymentInfo\":{\"hash\":\"d371fe09174bd193f21625b37584085683a1c8aa\",\"dir\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api\"}}",
+      "2": "{\"name\":\"inspector-gw\",\"env\":{\"NODE_ENV\":\"production\",\"CONFIG_DIR\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api\",\"__APIC_APP_HOME\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api/definitions\",\"TARGET_URL\":\"http://127.0.0.1:4001\",\"__APIC_GW\":true},\"_groups\":[{\"name\":\"default\",\"scale\":1,\"id\":1}],\"id\":2,\"deploymentInfo\":{\"hash\":\"c97031aac428b14a906a95c22aed4130e2c7df77\",\"dir\":\"/usr/local/lib/node_modules/apiconnect/node_modules/microgateway\"}}"
+    },
+    "Group": {},
+    "Executor": {
+      "1": "{\"address\":\"localhost\",\"hostname\":\"Curtiss-MacBook-Pro-2.local\",\"metadata\":{},\"id\":1}"
+    },
+    "Gateway": {},
+    "ServiceInstance": {
+      "1": "{\"executorId\":1,\"serverServiceId\":1,\"groupId\":1,\"started\":true,\"setSize\":1,\"cpus\":\"1\",\"tracingEnabled\":false,\"id\":1,\"startTime\":\"2016-08-02T02:52:14.246Z\",\"applicationName\":\"inspector\",\"agentVersion\":\"2.0.3\",\"debuggerVersion\":\"n/a\",\"PMPort\":8702,\"restartCount\":0,\"currentDeploymentId\":\"d371fe09174bd193f21625b37584085683a1c8aa\",\"containerVersionInfo\":{\"os\":{\"platform\":\"darwin\",\"arch\":\"x64\",\"release\":\"14.5.0\"},\"node\":\"v5.9.1\",\"container\":{\"type\":\"strong-pm\",\"version\":\"5.2.2\"},\"commit\":{\"hash\":\"d371fe09174bd193f21625b37584085683a1c8aa\",\"dir\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api\"},\"driverMeta\":{}}}",
+      "2": "{\"executorId\":1,\"serverServiceId\":2,\"groupId\":1,\"started\":true,\"setSize\":1,\"cpus\":\"1\",\"tracingEnabled\":false,\"id\":2,\"startTime\":\"2016-08-02T02:52:16.488Z\",\"applicationName\":\"microgateway\",\"agentVersion\":\"2.0.3\",\"debuggerVersion\":\"n/a\",\"PMPort\":8702,\"restartCount\":0,\"currentDeploymentId\":\"c97031aac428b14a906a95c22aed4130e2c7df77\",\"containerVersionInfo\":{\"os\":{\"platform\":\"darwin\",\"arch\":\"x64\",\"release\":\"14.5.0\"},\"node\":\"v5.9.1\",\"container\":{\"type\":\"strong-pm\",\"version\":\"5.2.2\"},\"commit\":{\"hash\":\"c97031aac428b14a906a95c22aed4130e2c7df77\",\"dir\":\"/usr/local/lib/node_modules/apiconnect/node_modules/microgateway\"},\"driverMeta\":{}}}"
+    },
+    "ServiceProcess": {
+      "1": "{\"parentPid\":58076,\"pid\":58077,\"workerId\":1,\"listeningSockets\":[{\"addressType\":4,\"address\":\"0.0.0.0\",\"port\":4001}],\"isTrackingObjects\":false,\"isProfiling\":false,\"isTracing\":false,\"debugger\":{\"running\":false,\"port\":null},\"watchdogTimeout\":0,\"watchdogStallout\":0,\"isSnapshotting\":false,\"startTime\":\"2016-08-02T02:52:14.214Z\",\"stopReason\":\"\",\"serviceInstanceId\":1,\"id\":1,\"stopTime\":null}",
+      "2": "{\"parentPid\":58075,\"pid\":58076,\"workerId\":0,\"listeningSockets\":[],\"isTrackingObjects\":false,\"isProfiling\":false,\"isTracing\":false,\"debugger\":{\"running\":false,\"port\":null},\"watchdogTimeout\":0,\"watchdogStallout\":0,\"isSnapshotting\":false,\"startTime\":\"2016-08-02T02:52:13.983Z\",\"stopReason\":\"\",\"serviceInstanceId\":1,\"id\":2,\"stopTime\":null}",
+      "3": "{\"parentPid\":58078,\"pid\":58079,\"workerId\":1,\"listeningSockets\":[{\"addressType\":4,\"address\":null,\"port\":4002}],\"isTrackingObjects\":false,\"isProfiling\":false,\"isTracing\":false,\"debugger\":{\"running\":false,\"port\":null},\"watchdogTimeout\":0,\"watchdogStallout\":0,\"isSnapshotting\":false,\"startTime\":\"2016-08-02T02:52:16.466Z\",\"stopReason\":\"\",\"serviceInstanceId\":2,\"id\":3,\"stopTime\":null}",
+      "4": "{\"parentPid\":58075,\"pid\":58078,\"workerId\":0,\"listeningSockets\":[],\"isTrackingObjects\":false,\"isProfiling\":false,\"isTracing\":false,\"debugger\":{\"running\":false,\"port\":null},\"watchdogTimeout\":0,\"watchdogStallout\":0,\"isSnapshotting\":false,\"startTime\":\"2016-08-02T02:52:16.235Z\",\"stopReason\":\"\",\"serviceInstanceId\":2,\"id\":4,\"stopTime\":null}"
+    },
+    "ServiceMetric": {},
+    "AgentTrace": {
+      "1": "{\"processId\":3,\"workerId\":1,\"timeStamp\":\"2016-08-02T02:53:09.692Z\",\"trace\":[1470106389692,\"/process?action=start&bpdId=25.41a2aec1-b738-40e3-954e-81e41f62496b&processAppId=2066.82429baf-7245-461b-a7a8-5cef3f050ee9\",572.514307,{\"127.0.0.1:50555\":71.47483600000001,\"closed\":true},{\"nodes\":[{\"name\":\"/process?action=start&bpdId=25.41a2aec1-b738-40e3-954e-81e41f62496b&processAppId=2066.82429baf-7245-461b-a7a8-5cef3f050ee9\",\"value\":572.514307},{\"name\":\"Outgoing HTTP\",\"q\":\"GET http://127.0.0.1:50555/api/snapshots/current\",\"start\":1470106389125,\"value\":10.847925}],\"links\":[{\"source\":0,\"target\":1,\"value\":10.847925}]}],\"id\":1}"
+    },
+    "ExpressUsageRecord": {},
+    "ProfileData": {}
+  }
+}
