@@ -1,6 +1,6 @@
 {
   "ids": {
-    "Project": 14
+    "Project": 15
   },
   "models": {
     "Project": {
@@ -16,7 +16,8 @@
       "10": "{\"name\":\"inspector-api-test\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-api-test\",\"displayName\":\"inspector-api-test\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":10}",
       "11": "{\"name\":\"inspector-app\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-app\",\"displayName\":\"inspector-app\",\"type\":\"directory\",\"projectType\":\"unknown\",\"id\":11}",
       "12": "{\"name\":\"api-test-5\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/api-test-5\",\"displayName\":\"api-test-5\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":12}",
-      "13": "{\"name\":\"api-test-1\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/api-test-1\",\"displayName\":\"api-test-1\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":13}"
+      "13": "{\"name\":\"api-test-1\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/api-test-1\",\"displayName\":\"api-test-1\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":13}",
+      "14": "{\"name\":\"inspector-test-2\",\"path\":\"/Users/crmiles/Documents/dev/workspaces/git/inspector-test-2\",\"displayName\":\"inspector-test-2\",\"type\":\"project\",\"projectType\":\"loopback\",\"id\":14}"
     }
   }
 }
