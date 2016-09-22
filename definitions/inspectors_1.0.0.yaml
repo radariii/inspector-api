@@ -314,4 +314,3 @@ x-ibm-configuration:
       - invoke:
           target-url: $(runtime-url)$(request.path)$(request.search)
           tls-profile: 'client:Loopback-client'
-  gateway: micro-gateway
