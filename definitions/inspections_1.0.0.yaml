@@ -274,10 +274,6 @@ x-ibm-configuration:
       properties:
         runtime-url: 'https://inspector-apis-impl.mybluemix.net'
   properties:
-    catalog.host:
-      value: 'http://localhost:4002'
-      description: ''
-      encoded: false
     runtime-url:
       value: 'http://localhost:4001'
       description: ''
