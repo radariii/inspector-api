@@ -10,8 +10,6 @@ apis:
     $ref: inspections_1.0.0.yaml
   inspectors:
     $ref: inspectors_1.0.0.yaml
-  ibm-bpm-api:
-    $ref: ../ibm-bpm-api.yaml
 visibility:
   view:
     type: public
