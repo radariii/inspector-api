@@ -4,12 +4,12 @@ info:
   title: inspector
   version: 1.0.0
 apis:
-  checklists:
-    $ref: checklists_1.0.0.yaml
   inspections:
     $ref: inspections_1.0.0.yaml
   inspectors:
     $ref: inspectors_1.0.0.yaml
+  checklists:
+    $ref: checklists_1.0.0.yaml
 visibility:
   view:
     type: public
