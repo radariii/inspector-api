@@ -245,41 +245,6 @@ paths:
                 type: number
                 format: double
       deprecated: false
-  /checklists/change-stream:
-    post:
-      tags:
-        - checklists
-      summary: Create a change stream.
-      operationId: checklists.createChangeStream__post_checklists_change-stream
-      parameters:
-        - name: options
-          in: formData
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: file
-      deprecated: false
-    get:
-      tags:
-        - checklists
-      summary: Create a change stream.
-      operationId: checklists.createChangeStream__get_checklists_change-stream
-      parameters:
-        - name: options
-          in: query
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: file
-      deprecated: false
 securityDefinitions:
   clientID:
     description: ''

@@ -21,7 +21,9 @@ paths:
     put:
       tags:
         - checklists
-      summary: Update an existing model instance or insert a new one into the data source.
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source.
       operationId: checklists.upsert
       parameters:
         - name: data
@@ -145,7 +147,9 @@ paths:
     put:
       tags:
         - checklists
-      summary: Update attributes for a model instance and persist it into the data source.
+      summary: >-
+        Update attributes for a model instance and persist it into the data
+        source.
       operationId: checklists.prototype.updateAttributes
       parameters:
         - name: data
@@ -234,41 +238,6 @@ paths:
                 type: number
                 format: double
       deprecated: false
-  /checklists/change-stream:
-    post:
-      tags:
-        - checklists
-      summary: Create a change stream.
-      operationId: checklists.createChangeStream__post_checklists_change-stream
-      parameters:
-        - name: options
-          in: formData
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: file
-      deprecated: false
-    get:
-      tags:
-        - checklists
-      summary: Create a change stream.
-      operationId: checklists.createChangeStream__get_checklists_change-stream
-      parameters:
-        - name: options
-          in: query
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: file
-      deprecated: false
   /inspections:
     post:
       tags:
@@ -291,7 +260,9 @@ paths:
     put:
       tags:
         - inspections
-      summary: Update an existing model instance or insert a new one into the data source.
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source.
       operationId: inspections.upsert
       parameters:
         - name: data
@@ -415,7 +386,9 @@ paths:
     put:
       tags:
         - inspections
-      summary: Update attributes for a model instance and persist it into the data source.
+      summary: >-
+        Update attributes for a model instance and persist it into the data
+        source.
       operationId: inspections.prototype.updateAttributes
       parameters:
         - name: data
@@ -504,41 +477,6 @@ paths:
                 type: number
                 format: double
       deprecated: false
-  /inspections/change-stream:
-    post:
-      tags:
-        - inspections
-      summary: Create a change stream.
-      operationId: inspections.createChangeStream__post_inspections_change-stream
-      parameters:
-        - name: options
-          in: formData
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: file
-      deprecated: false
-    get:
-      tags:
-        - inspections
-      summary: Create a change stream.
-      operationId: inspections.createChangeStream__get_inspections_change-stream
-      parameters:
-        - name: options
-          in: query
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: file
-      deprecated: false
   /inspectors:
     post:
       tags:
@@ -561,7 +499,9 @@ paths:
     put:
       tags:
         - inspectors
-      summary: Update an existing model instance or insert a new one into the data source.
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source.
       operationId: inspectors.upsert
       parameters:
         - name: data
@@ -685,7 +625,9 @@ paths:
     put:
       tags:
         - inspectors
-      summary: Update attributes for a model instance and persist it into the data source.
+      summary: >-
+        Update attributes for a model instance and persist it into the data
+        source.
       operationId: inspectors.prototype.updateAttributes
       parameters:
         - name: data
@@ -773,41 +715,6 @@ paths:
               count:
                 type: number
                 format: double
-      deprecated: false
-  /inspectors/change-stream:
-    post:
-      tags:
-        - inspectors
-      summary: Create a change stream.
-      operationId: inspectors.createChangeStream__post_inspectors_change-stream
-      parameters:
-        - name: options
-          in: formData
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: file
-      deprecated: false
-    get:
-      tags:
-        - inspectors
-      summary: Create a change stream.
-      operationId: inspectors.createChangeStream__get_inspectors_change-stream
-      parameters:
-        - name: options
-          in: query
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: file
       deprecated: false
 definitions:
   checklists:

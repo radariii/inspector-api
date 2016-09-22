@@ -238,41 +238,6 @@ paths:
                 type: number
                 format: double
       deprecated: false
-  /inspectors/change-stream:
-    post:
-      tags:
-        - inspectors
-      summary: Create a change stream.
-      operationId: inspectors.createChangeStream__post_inspectors_change-stream
-      parameters:
-        - name: options
-          in: formData
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: file
-      deprecated: false
-    get:
-      tags:
-        - inspectors
-      summary: Create a change stream.
-      operationId: inspectors.createChangeStream__get_inspectors_change-stream
-      parameters:
-        - name: options
-          in: query
-          required: false
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: file
-      deprecated: false
 definitions:
   x-any:
     properties: {}
