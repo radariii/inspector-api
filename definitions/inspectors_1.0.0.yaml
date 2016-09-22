@@ -300,10 +300,8 @@ x-ibm-configuration:
         runtime-url: $(TARGET_URL)
     sb:
       properties:
-        runtime-url: 'http://localhost:4001'
-    Sandbox:
-      properties:
         runtime-url: 'https://inspector-apis-impl.mybluemix.net'
+    Sandbox: {}
   properties:
     runtime-url:
       value: 'http://localhost:4001'
