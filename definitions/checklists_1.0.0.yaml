@@ -258,7 +258,7 @@ x-ibm-configuration:
     execute:
       - invoke:
           target-url: $(runtime-url)$(request.path)$(request.search)
-          tls-profile: 'client:Loopback-client'
+          tls-profile: $(invoke-tls-profile)
   testable: true
   enforced: true
   cors:
@@ -270,9 +270,14 @@ x-ibm-configuration:
     sb:
       properties:
         runtime-url: 'https://inspector-apis-impl.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
   properties:
     runtime-url:
-      value: 'http://localhost:4001'
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
       description: ''
       encoded: false
 definitions:

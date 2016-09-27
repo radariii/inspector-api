@@ -1,0 +1,52 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Sensors
+  x-ibm-name: sensors
+host: $(catalog.host)
+basePath: /api
+paths:
+  /sensors:
+    get:
+      responses:
+        '200':
+          description: 200 OK
+securityDefinitions:
+  clientID:
+    description: ''
+    in: header
+    name: X-IBM-Client-Id
+    type: apiKey
+security:
+  - clientID: []
+x-ibm-configuration:
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(target-url)$(request.path)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    target-url:
+      value: 'http://localhost:4001'
+      description: ''
+      encoded: false
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false
+  catalogs:
+    sb:
+      properties:
+        target-url: 'https://inspector-apis-impl.mybluemix.net'
+        runtime-url: 'https://inspector-apis-impl.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+consumes:
+  - application/json
+produces:
+  - application/json
+schemes:
+  - https

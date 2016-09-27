@@ -10,8 +10,8 @@ apis:
     $ref: inspectors_1.0.0.yaml
   checklists:
     $ref: checklists_1.0.0.yaml
-  ibm-bpm-api:
-    $ref: ibm-bpm-api.yaml
+  sensors:
+    $ref: sensors_1.0.0.yaml
 visibility:
   view:
     type: public

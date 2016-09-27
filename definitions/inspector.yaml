@@ -716,6 +716,245 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /sensors:
+    post:
+      tags:
+        - sensors
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: sensors.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/sensors'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/sensors'
+      deprecated: false
+    put:
+      tags:
+        - sensors
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source.
+      operationId: sensors.upsert
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/sensors'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/sensors'
+      deprecated: false
+    get:
+      tags:
+        - sensors
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: sensors.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/sensors'
+      deprecated: false
+  '/sensors/{id}/exists':
+    get:
+      tags:
+        - sensors
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'sensors.exists__get_sensors_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/sensors/{id}':
+    head:
+      tags:
+        - sensors
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'sensors.exists__head_sensors_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - sensors
+      summary: Find a model instance by id from the data source.
+      operationId: sensors.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/sensors'
+      deprecated: false
+    delete:
+      tags:
+        - sensors
+      summary: Delete a model instance by id from the data source.
+      operationId: sensors.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - sensors
+      summary: >-
+        Update attributes for a model instance and persist it into the data
+        source.
+      operationId: sensors.prototype.updateAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/sensors'
+        - name: id
+          in: path
+          description: PersistedModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/sensors'
+      deprecated: false
+  /sensors/findOne:
+    get:
+      tags:
+        - sensors
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: sensors.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/sensors'
+      deprecated: false
+  /sensors/update:
+    post:
+      tags:
+        - sensors
+      summary: Update instances of the model matched by where from the data source.
+      operationId: sensors.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/sensors'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances updated
+            type: object
+      deprecated: false
+  /sensors/count:
+    get:
+      tags:
+        - sensors
+      summary: Count instances of the model matched by where from the data source.
+      operationId: sensors.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
   checklists:
     properties:
@@ -814,6 +1053,20 @@ definitions:
     required:
       - _id
     additionalProperties: false
+  sensors:
+    properties:
+      _id:
+        type: string
+      deviceId:
+        type: string
+      deviceType:
+        type: string
+      payload:
+        type: object
+    required:
+      - _id
+    additionalProperties: false
+basePath: /api
 swagger: '2.0'
 info:
   x-ibm-name: inspector
@@ -822,7 +1075,6 @@ info:
 schemes:
   - https
 host: $(catalog.host)
-basePath: /api
 consumes:
   - application/json
 produces:
@@ -850,8 +1102,20 @@ x-ibm-configuration:
         runtime-url: $(TARGET_URL)
     sb:
       properties:
-        runtime-url: 'http://localhost:4001'
+        runtime-url: >-
+          https://apiconnect-359f9ab2-ce93-4e95-8e74-fef2e7ce5d66.crmilescaibmcom-inspector.apic.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
   assembly:
     execute:
       - invoke:
           target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false

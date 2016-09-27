@@ -22,5 +22,13 @@
     "password": "aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574",
     "name": "Checklists-CloudantDS",
     "connector": "cloudant"
+  },
+  "Sensors-CloudantDS": {
+    "url": "https://8bacdccc-570f-4047-8904-e0e00299d533-bluemix:aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574@8bacdccc-570f-4047-8904-e0e00299d533-bluemix.cloudant.com",
+    "database": "iotsensors",
+    "username": "8bacdccc-570f-4047-8904-e0e00299d533-bluemix",
+    "password": "aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574",
+    "name": "Sensors-CloudantDS",
+    "connector": "cloudant"
   }
 }

@@ -1,1 +1,6 @@
-{}
+us.apiconnect.ibmcloud.com.meta:
+  formFactor: BLUEMIX_PUBLIC
+  serverCapabilities:
+    authTypes:
+      - basic
+      - token
