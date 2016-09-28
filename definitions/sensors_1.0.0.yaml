@@ -3,6 +3,9 @@ info:
   version: 1.0.0
   title: Sensors
   x-ibm-name: sensors
+  description: >-
+    This API provides information about the recent readings of temperature
+    sensors at the stores
 host: $(catalog.host)
 basePath: /api
 paths:
