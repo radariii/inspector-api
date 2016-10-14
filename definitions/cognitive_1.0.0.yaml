@@ -66,10 +66,21 @@ x-ibm-configuration:
                     verb: POST
                 - gatewayscript:
                     title: gatewayscript
-                    source: |-
+                    source: |
                       var body = apim.getvariable("message.body");
                       var text = apim.getvariable("translatedText");
                       body.text = text;
+
+                      var allText = [];
+                      var sentences = text.split(/[\.!\?]+/);
+                      if (sentences.length > 0){
+                          allText.push(sentences[0]);
+                          if (sentences.length > 1){
+                            allText.push(text.substr(text.indexOf(sentences[1])).trim());
+                          }  
+                      }
+                      body.sentences = allText;
+
                       apim.setvariable("message.body", body);
             - condition: >-
                 ((request.verb==='POST')&&(api.operation.path==='/speech-to-sentiment'))
