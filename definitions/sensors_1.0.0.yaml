@@ -26,13 +26,9 @@ x-ibm-configuration:
   assembly:
     execute:
       - invoke:
-          target-url: $(target-url)$(request.path)
+          target-url: $(runtime-url)$(request.path)
           tls-profile: $(invoke-tls-profile)
   properties:
-    target-url:
-      value: 'http://localhost:4001'
-      description: ''
-      encoded: false
     runtime-url:
       value: ''
       description: ''
@@ -44,8 +40,7 @@ x-ibm-configuration:
   catalogs:
     sb:
       properties:
-        target-url: 'https://inspector-apis-impl.mybluemix.net'
-        runtime-url: 'https://inspector-apis-impl.mybluemix.net'
+        runtime-url: 'https://api-app-wow2016.mybluemix.net'
         invoke-tls-profile: 'client:Loopback-client'
 consumes:
   - application/json

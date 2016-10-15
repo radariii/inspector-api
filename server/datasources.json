@@ -1,32 +1,32 @@
 {
   "Inspectors-CloudantDS": {
-    "url": "https://8bacdccc-570f-4047-8904-e0e00299d533-bluemix:aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574@8bacdccc-570f-4047-8904-e0e00299d533-bluemix.cloudant.com",
+    "url": "https://c30639a1-707a-49ce-a484-f088bcc74a49-bluemix:d393f66b9f5f72f92301adea616b0ae410ca36c0a0290a4ee79ab45b221e18cc@c30639a1-707a-49ce-a484-f088bcc74a49-bluemix.cloudant.com",
     "database": "inspectors",
-    "username": "8bacdccc-570f-4047-8904-e0e00299d533-bluemix",
-    "password": "aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574",
+    "username": "c30639a1-707a-49ce-a484-f088bcc74a49-bluemix",
+    "password": "d393f66b9f5f72f92301adea616b0ae410ca36c0a0290a4ee79ab45b221e18cc",
     "name": "Inspectors-CloudantDS",
     "connector": "cloudant"
   },
   "Inspections-CloudantDS": {
-    "url": "https://8bacdccc-570f-4047-8904-e0e00299d533-bluemix:aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574@8bacdccc-570f-4047-8904-e0e00299d533-bluemix.cloudant.com",
+    "url": "https://c30639a1-707a-49ce-a484-f088bcc74a49-bluemix:d393f66b9f5f72f92301adea616b0ae410ca36c0a0290a4ee79ab45b221e18cc@c30639a1-707a-49ce-a484-f088bcc74a49-bluemix.cloudant.com",
     "database": "inspections",
-    "username": "8bacdccc-570f-4047-8904-e0e00299d533-bluemix",
-    "password": "aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574",
+    "username": "c30639a1-707a-49ce-a484-f088bcc74a49-bluemix",
+    "password": "d393f66b9f5f72f92301adea616b0ae410ca36c0a0290a4ee79ab45b221e18cc",
     "name": "Inspections-CloudantDS",
     "connector": "cloudant"
   },
   "Checklists-CloudantDS": {
-    "url": "https://8bacdccc-570f-4047-8904-e0e00299d533-bluemix:aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574@8bacdccc-570f-4047-8904-e0e00299d533-bluemix.cloudant.com",
+    "url": "https://c30639a1-707a-49ce-a484-f088bcc74a49-bluemix:d393f66b9f5f72f92301adea616b0ae410ca36c0a0290a4ee79ab45b221e18cc@c30639a1-707a-49ce-a484-f088bcc74a49-bluemix.cloudant.com",
     "database": "checklists",
-    "username": "8bacdccc-570f-4047-8904-e0e00299d533-bluemix",
-    "password": "aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574",
+    "username": "c30639a1-707a-49ce-a484-f088bcc74a49-bluemix",
+    "password": "d393f66b9f5f72f92301adea616b0ae410ca36c0a0290a4ee79ab45b221e18cc",
     "name": "Checklists-CloudantDS",
     "connector": "cloudant"
   },
   "Sensors-CloudantDS": {
-    "url": "https://8bacdccc-570f-4047-8904-e0e00299d533-bluemix:aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574@8bacdccc-570f-4047-8904-e0e00299d533-bluemix.cloudant.com",
+    "url": "https://c30639a1-707a-49ce-a484-f088bcc74a49-bluemix:d393f66b9f5f72f92301adea616b0ae410ca36c0a0290a4ee79ab45b221e18cc@c30639a1-707a-49ce-a484-f088bcc74a49-bluemix.cloudant.com",
     "database": "iotsensors",
-    "username": "8bacdccc-570f-4047-8904-e0e00299d533-bluemix",
+    "username": "c30639a1-707a-49ce-a484-f088bcc74a49-bluemix",
     "password": "aac149c0d30b7c35172516a8fb426c8d533206040999840782a7d28c484b3574",
     "name": "Sensors-CloudantDS",
     "connector": "cloudant"

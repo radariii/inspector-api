@@ -1,0 +1,96 @@
+type: bluemix
+server:
+  displayName: US South
+  name: us-south
+  host: us.apiconnect.ibmcloud.com
+org:
+  url: 'https://us.apiconnect.ibmcloud.com/v1/orgs/5801880c0cf29bd1b45c62ca'
+  id: 5801880c0cf29bd1b45c62ca
+  name: crmilescaibmcom-dev
+  status: active
+  orgType: apiProvider
+  displayName: crmiles@ca.ibm.com (dev)
+  externalOrgId: 7986d738-fe3c-4c39-a787-1856561a8ada
+  externalInviteOverride: 'https://new-console.ng.bluemix.net/apis/catalog/invitation'
+  externalSpaceId: 7986d738-fe3c-4c39-a787-1856561a8ada
+  externalNativeOrgId: 701f738f-0add-49fb-a169-86a97e4454dc
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+catalog:
+  id: 5801880c0cf29bd1b45c62d0
+  shortName: sb
+  name: Sandbox
+  sandbox: true
+app:
+  metadata:
+    guid: 9f44a07c-5e09-401d-a73b-b4114a170c7e
+  entity:
+    guid: 9f44a07c-5e09-401d-a73b-b4114a170c7e
+    name: api-app-wow2016
+    routes:
+      - guid: 372ee2b6-ed37-486e-9c70-e63edc2ddd37
+        host: apiconnect-9f44a07c-5e09-401d-a73b-b4114a170c7e
+        port: null
+        path: ''
+        domain:
+          guid: 569aaea6-fc35-436a-a7c0-42558fdb92e5
+          name: crmilescaibmcom-dev.apic.mybluemix.net
+    running_instances: 0
+    services: []
+    available_domains:
+      - guid: 569aaea6-fc35-436a-a7c0-42558fdb92e5
+        name: crmilescaibmcom-dev.apic.mybluemix.net
+        owning_organization_guid: 701f738f-0add-49fb-a169-86a97e4454dc
+      - guid: 693288e0-16f0-440a-abe5-6c4e4a2518bf
+        name: crmilescaibmcom-inspector.apic.mybluemix.net
+        owning_organization_guid: 701f738f-0add-49fb-a169-86a97e4454dc
+      - guid: 5ae6305d-a896-46a0-b476-b35705394737
+        name: crmilescaibmcom-mfp.apic.mybluemix.net
+        owning_organization_guid: 701f738f-0add-49fb-a169-86a97e4454dc
+      - guid: f4b90d7e-2cd3-4d30-b200-f28bbaf6be20
+        name: mybluemix.net
+        router_group_guid: null
+        router_group_type: null
+    production: false
+    space_guid: 7986d738-fe3c-4c39-a787-1856561a8ada
+    stack_guid: ac91d31a-86a3-453b-babf-8d49c9d763fc
+    buildpack: null
+    detected_buildpack: null
+    environment_json: {}
+    memory: 256
+    instances: 1
+    disk_quota: 1024
+    state: STOPPED
+    version: ed4dfca5-c5a4-4438-bd64-e6cada6b9c86
+    command: null
+    console: false
+    debug: null
+    staging_task_id: null
+    package_state: PENDING
+    health_check_type: port
+    health_check_timeout: null
+    staging_failed_reason: null
+    staging_failed_description: null
+    diego: false
+    docker_image: null
+    package_updated_at: null
+    detected_start_command: ''
+    enable_ssh: true
+    docker_credentials_json:
+      redacted_message: '[PRIVATE DATA HIDDEN]'
+    ports: null
+id: 0854854d-2fe7-44df-bea1-19724bf68c85
+target: 1.0.0
+versionOptions:
+  inplaceUpdate: true
+publishApp: true
+publishProducts: true
+workspaceDir:
+  name: inspector
+  path: /Users/crmiles/Documents/dev/workspaces/git/inspector-api
+  id: 8
+  displayName: inspector
+  type: project
+  projectType: loopback

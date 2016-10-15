@@ -269,7 +269,7 @@ x-ibm-configuration:
         runtime-url: $(TARGET_URL)
     sb:
       properties:
-        runtime-url: 'https://inspector-apis-impl.mybluemix.net'
+        runtime-url: 'https://api-app-wow2016.mybluemix.net'
         invoke-tls-profile: 'client:Loopback-client'
   properties:
     runtime-url:
