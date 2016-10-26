@@ -12,8 +12,6 @@ apis:
     $ref: checklists_1.0.0.yaml
   sensors:
     $ref: sensors_1.0.0.yaml
-  cognitive:
-    $ref: cognitive_1.0.0.yaml
   ibm-bpm-api:
     $ref: ibm-bpm-api.yaml
 visibility:
